@@ -8,6 +8,8 @@ Make the app with `build.sh`.
 You can generate public and private keys with `generate_key.py`.
 Put your public key in `src/main.cpp` in variable `str_n`.
 
+It uses AES encryption (symmetric) combined with RSA encryption (asymmetric).
+
 We use :
 - [tiny-bignum-c](https://github.com/kokke/tiny-bignum-c)
 - [storage.c](https://framagit.org/Yaya.Cout/numworks-extapp-storage/-/tree/master)
