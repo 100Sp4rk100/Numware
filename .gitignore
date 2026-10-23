@@ -1,1 +1,16 @@
 target/
+
+userland/*
+!userland/userland_A.n0110.S
+!userland/userland_B.n0110.S
+!userland/userland_A.n0120.S
+!userland/userland_B.n0120.S
+
+!userland/output/
+userland/output/*
+!userland/output/userland_A.n0110.bin
+!userland/output/userland_B.n0110.bin
+!userland/output/userland_A.n0120.bin
+!userland/output/userland_B.n0120.bin
+
+build.sh

@@ -82,11 +82,11 @@ void detroySlots(){
     static uint8_t ram_buffer[USERLAND_SIZE];
     std::memcpy(ram_buffer, userland_buffer, USERLAND_SIZE);
 
-    int sector_index = Ion::Device::Flash::SectorAtAddress(reinterpret_cast<uint32_t>(slot));
+    int sector_index = Flash::SectorAtAddress(reinterpret_cast<uint32_t>(slot));
     if (sector_index != -1) {
-        Ion::Device::Flash::EraseSectorWithInterruptions(sector_index, true);
+        Flash::EraseSectorWithInterruptions(sector_index, true);
 
-        Ion::Device::Flash::WriteMemoryWithInterruptions(slot, ram_buffer, USERLAND_SIZE, true);
+        Flash::WriteMemoryWithInterruptions(slot, ram_buffer, USERLAND_SIZE, true);
 
         Display::pushRectUniform(Rect(0, 0, EADK_SCREEN_WIDTH, EADK_SCREEN_HEIGHT), Color(0x000000));
         jump(jump_address);

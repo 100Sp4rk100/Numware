@@ -4,7 +4,6 @@ If you enter the wrong key, simply reset your calculator using the button on the
 
 In the current code, the private key is `5925cdf68a8d42ce26121d09961bed1d5be657b0b722cf1533a1464f289a4835`.
 
-Make the app with `build.sh`.
 You can generate public and private keys with `generate_key.py`.
 Put your public key in `src/main.cpp` in variable `str_n`.
 
